@@ -20,9 +20,38 @@ This should display “No programmes available” but it will keep checking the 
 ###package java
 
 MyResource class - provides the restful interface for the clients.
+
 SaxHandler class - parses the xml file.
+
 Schedule class - builds a schedule of programmes.
+
 Programme class - contains the information for a single instance of a Programme.
+
+###package tests
+
+Junit tests for the java classes
+
+###package webapp
+
+The client to upload the xml file includes;
+
+
+index.jsp
+
+fileUpload.js
+
+main.css
+
+
+###package webapp/onlineSchedule
+
+The client to view the online schedule.
+
+This includes ngDialog - a library to produce modals and pop ups which can be found at;
+
+https://github.com/likeastore/ngDialog
+
+
 
 
 
