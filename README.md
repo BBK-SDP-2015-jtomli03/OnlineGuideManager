@@ -49,7 +49,7 @@ main.css
 
 The client to view the online schedule.
 
-This includes ngDialog - a library to produce modals and pop ups which can be found at;
+This makes use of ngDialog for the pop-up recording confirmation - a library to produce modals and pop ups which can be found at;
 
 https://github.com/likeastore/ngDialog
 
