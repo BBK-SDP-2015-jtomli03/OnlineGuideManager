@@ -1,5 +1,7 @@
 # An Online Programme Guide — developed with AngularJS and JAX-RS.
 
+A facility to download an xml file containing a programme schedule to the server, which will be processed server side, before automatically updating the online schedule.
+
 ### **Please run in safari**
 
 ##How to Run
