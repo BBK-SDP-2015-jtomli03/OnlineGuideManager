@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ngDialog/ng-dialog/css/ngDialog.css">
+    <link rel="stylesheet" href="ngDialog/ng-dialog/css/ngDialog-custom-width.css">
+    <link rel="stylesheet" href="ngDialog/ng-dialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="topBanner">
+    <img src="/img/sky_logo.png" alt="sky logo">
+    <h1>007 Programme Guide</h1>
+</div>
+
+<p>Click on a movie to start remote recording. Scroll the guide to search for more programmes >></p>
+
+<div class="guide_container" ng-app="myApp">
+    <ol class="channel">
+        <li>Channel</li>
+        <li>Sean Connery</li>
+        <li>George Lazenby</li>
+        <li>Roger Moore</li>
+        <li>Timothy Dalton</li>
+        <li>Pierce Brosnan</li>
+        <li>Daniel Craig</li>
+    </ol>
+    <div class="scrollable" ng-controller="GuideController">
+        <ol class="time">
+            <li>9AM</li>
+            <li>10AM</li>
+            <li>11AM</li>
+            <li>12PM</li>
+            <li>1PM</li>
+            <li>2PM</li>
+            <li>3PM</li>
+            <li>4PM</li>
+            <li>5PM</li>
+            <li>6PM</li>
+            <li>7PM</li>
+            <li>8PM</li>
+            <li>9PM</li>
+            <li>10PM</li>
+            <li>11PM</li>
+            <li>12AM</li>
+            <li>1AM</li>
+            <li>2AM</li>
+            <li>3AM</li>
+            <li>4AM</li>
+            <li>5AM</li>
+            <li>6AM</li>
+            <li>7AM</li>
+            <li>8AM</li>
+        </ol>
+        <ol id="sean_connery">
+            <li ng-repeat="prog in sean"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+        <ol id="george_lazenby">
+            <li ng-repeat="prog in george"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+        <ol id="roger_moore">
+            <li ng-repeat="prog in roger"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+        <ol id="timothy_dalton">
+            <li ng-repeat="prog in timothy"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+        <ol id="pierce_brosnan">
+            <li ng-repeat="prog in pierce"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+        <ol id="daniel_craig">
+            <li ng-repeat="prog in daniel"
+                ng-style="{'width': prog.width + '%', 'text-align': prog.align, 'padding-left': prog.paddingL + '%'}"
+                ng-click="record(prog.programme)">{{prog.programme}}</li>
+        </ol>
+    </div>
+</div>
+
+<footer>
+    <p>Produced by Jo Tomlinson</p>
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+<!--<script src="bower_components/angular/angular.js"></script>-->
+<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+<script src="app.js"></script>
+<script src="ngDialog/ng-dialog/js/ngDialog.js"></script>
+</body>
+</html>

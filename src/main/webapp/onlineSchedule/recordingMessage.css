@@ -1,0 +1,31 @@
+/************************************************
+*************************************************
+Styles for dialog box confirming Remote Recording
+(recordMessages.html)
+*************************************************
+*************************************************/
+#recordConfirmation {
+    margin: 20% 0;
+}
+
+#recordConfirmation img {
+    float: left;
+    width: 20%;
+    margin: 0 1% 0 5%;
+}
+
+#recordConfirmation h2 {
+    float: left;
+    width: 74%;
+}
+
+#recordConfirmation p {
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8em;
+    color: #000;
+}
+
+button {
+    float: right;
+}

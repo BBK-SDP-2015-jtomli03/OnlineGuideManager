@@ -1,0 +1,149 @@
+/************************************************
+*************************************************
+Styles for Document
+*************************************************
+*************************************************/
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+    color: #000;
+    margin: 0; /*Overrides html5-boilerplate css*/
+}
+
+p {
+    width: 70%;
+    padding: 0;
+    margin: 0 15%;
+}
+
+/************************************************
+*************************************************
+Styles for Top Banner with Logo and Header
+*************************************************
+*************************************************/
+.topBanner, .topBanner img, .topBanner h1{
+    float: left;
+    padding: 0;
+    border: 0;
+}
+
+.topBanner{
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+
+.topBanner img {
+    width: 15%;
+    margin: 0 0 0 5%;
+}
+
+.topBanner h1 {
+    font-size: 3.5em;
+    color: #5C5C5C;
+    margin: 4% 0 0 5%;
+}
+
+/************************************************
+*************************************************
+Styles for Programme Guide
+*************************************************
+*************************************************/
+.guide_container {
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    border: 0.125em solid #000099;
+    margin: 2% auto;
+}
+
+.guide_container ol.time {
+    text-align: left;
+}
+
+.guide_container ol {
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide_container li {
+    height: 40px;
+    outline: 1px solid #000099;
+    padding-top: 10px;
+    border: 0;
+    margin: 0;
+}
+
+/** Start of fixed channel list **/
+.guide_container ol.channel {
+    width: 16%;
+    border-right: 1px solid #000099;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.guide_container ol.channel li {
+    width: 100%;
+    background-color: #E6E6E6;
+}
+/** End of fixed channel list **/
+
+/**
+* Start of scrollable section of guide -
+* Calculations for widths;
+* Initial schedule must show programmes from 9am - 3pm (7hrs)
+* Viewable area = 100% width of div.scrollable
+* Showing 7hrs of schedule makes the width per hour 100%/7hrs = 14.2857%
+* So total width for 24hr scrollable guide <ol> = 14.2857% x 24hrs = 342.857%
+* Width of each <li> for ol = one hour of schedule = 100% width of <ol>/24hrs = 4.16667%
+*!!!!!!!!! IF THESE VALUES CHANGE YOU NEED TO CHANGE Programme.setWidth() in ProgrammeManager com.sky.guide !!!!!!!!!
+**/
+.scrollable {
+    float: left;
+    width: 84%;
+    overflow: scroll;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.scrollable  ol {
+    display: inline;
+    width: 342.857%; /* (100% fixed width/7hrs) x 24hrs = 342.857% total scrollable width as above*/
+    border: 0;
+}
+
+.scrollable ol li {
+    float: left;
+    width: 4.166%; /* 100%/24hrs = 4.16667% per hour schedule as above */
+}
+
+.scrollable ol.time li {
+    background-color: #E6E6E6;
+    outline: 0;
+}
+/** End of scrollable section **/
+
+/************************************************
+*************************************************
+Styles for Footer
+*************************************************
+*************************************************/
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    margin: 5% 0 0 0;
+}
+
+footer p {
+    width: 50%;
+    font-family: "Courier New", courier, monospace;
+    font-size: 2em;
+    color: #00CCFF;
+    padding: 2.5% 25%;
+    margin: 0;
+}
