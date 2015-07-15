@@ -15,4 +15,14 @@ This should display “No programmes available” but it will keep checking the 
 
 3) Go back to the tab for the onlineSchedule and you will see that the guide has been updated automatically according to the schedule given by the xml file. Now if you click on a movie, you will see the pop-up box displayed stating that the particular movie is set to record.
 
+##The Classes
+
+###package java
+
+MyResource class - provides the restful interface for the clients.
+SaxHandler class - parses the xml file.
+Schedule class - builds a schedule of programmes.
+Programme class - contains the information for a single instance of a Programme.
+
+
 
