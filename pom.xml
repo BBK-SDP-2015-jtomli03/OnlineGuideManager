@@ -74,11 +74,6 @@
             <artifactId>angularjs</artifactId>
             <version>1.4.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>angular-route</artifactId>
-            <version>1.4.1</version>
-        </dependency>
     </dependencies>
     <properties>
         <jersey.version>2.19</jersey.version>
