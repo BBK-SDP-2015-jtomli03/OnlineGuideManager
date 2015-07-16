@@ -37,7 +37,7 @@ public class MyResourceTest {
 
     //<sean_channel> start-tag missing from xml, ie not properly formatted therefore expect the SaxParser to throw exception
     //ERROR FAILS -> NEED TO WRITE CODE TO HANDLE CORRECTLY
-    @Test (expected = ParserConfigurationException.class)
+    @Test(expected = ParserConfigurationException.class)
     public void testExceptionIfStartTagMissing() throws IOException {
         final File tempFile = tempFolder.newFile("tempFile.txt");
         FileUtils.writeStringToFile(tempFile, "<?xml version=“1.0” encoding=“UTF-8”?>\n" +

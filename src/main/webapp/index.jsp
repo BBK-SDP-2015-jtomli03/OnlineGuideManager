@@ -16,14 +16,18 @@
     <h1>Document Uploader</h1>
 </div>
 
+<%--action="http://localhost:8080/programmes/bond" method="post" enctype="multipart/form-data"--%>
 <form id="xmlUploader" action="http://localhost:8080/programmes/bond" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Upload A File For The 007 Channel</legend>
-        <div class="inputFile">
-            <label for="xmlFile">Please select a file to upload: <br>
-                <input type="file" class="input" id="xmlFile" name="xmlFile"  accept="text/xml" required>
+        <div class="left">
+            <label>Please select a file to upload: <br>
+                <input type="file" class="input"  name="xmlFile"  accept="text/xml" required>
             </label>
             <input type="submit" class="uploadButton" id="uploadfile" value="Upload File">
+        </div>
+        <div class="right">
+            <p id="uploadMessage">Only valid XML files can be uploaded</p>
         </div>
     </fieldset>
 </form>
