@@ -17,7 +17,7 @@ public class SaxHandler extends DefaultHandler {
     //method used by the SaxParser to determine start tags
     public void startElement(String uri, String localName, String qName,
                              Attributes attributes) {
-        //required method for Sax parsing - DO NOT DELETE
+        //empty method required for Sax parsing - DO NOT DELETE
     }
 
     //method used by the SaxParser to store strings between start and end tags
@@ -44,8 +44,9 @@ public class SaxHandler extends DefaultHandler {
      * relevant Schedule as instances of the Programme class
      *
      * @Param File the xml file to be processed
+     * @return A String for testing purposes
      */
-    public void processFile(File file){
+    public String processFile(File file){
         //read the file and save the xml to string
         String doc = readFile(file);
         //format XML so that it can be parsed by SaxParser
@@ -54,6 +55,7 @@ public class SaxHandler extends DefaultHandler {
         writeToFile(file, doc);
         //parse the file
         parseFile(file);
+        return "File Upload Successful!";
     }
 
     /**

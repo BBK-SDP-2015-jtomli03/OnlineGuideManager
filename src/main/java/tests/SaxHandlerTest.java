@@ -1,6 +1,6 @@
 package tests;
 
-import com.bond.sky.MyResource;
+import com.bond.sky.SaxHandler;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Rule;
@@ -11,7 +11,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-public class MyResourceTest {
+public class SaxHandlerTest {
 
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder();
@@ -30,8 +30,8 @@ public class MyResourceTest {
                 "            <end_time>11.00am</end_time>\n" +
                 "        </sean_channel>\n" +
                 "    </movie> </movie_data>");
-        MyResource resource = new MyResource();
-        String result = resource.acceptFile(tempFile);
+        SaxHandler handler = new SaxHandler();
+        String result = handler.processFile(tempFile);
         Assert.assertEquals("File Upload Successful!", result);
     }
 
@@ -51,8 +51,8 @@ public class MyResourceTest {
                 "            <end_time>11.00am</end_time>\n" +
                 "        </sean_channel>\n" +
                 "    </movie> </movie_data>");
-        MyResource resource = new MyResource();
-        resource.acceptFile(tempFile);
+        SaxHandler handler = new SaxHandler();
+        String result = handler.processFile(tempFile);
     }
 
     //</end_time> end-tag missing from xml, ie not properly formatted therefore expect the SaxParser to throw exception
@@ -71,7 +71,7 @@ public class MyResourceTest {
                 "            <end_time>11.00am\n" +
                 "        </sean_channel>\n" +
                 "    </movie> </movie_data>");
-        MyResource resource = new MyResource();
-        resource.acceptFile(tempFile);
+        SaxHandler handler = new SaxHandler();
+        String result = handler.processFile(tempFile);
     }
 }

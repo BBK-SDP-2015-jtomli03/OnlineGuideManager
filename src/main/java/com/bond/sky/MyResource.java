@@ -1,10 +1,12 @@
 package com.bond.sky;
 
 import org.glassfish.jersey.media.multipart.FormDataParam;
-
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Root resource (exposed at "programmes" path)
@@ -27,18 +29,19 @@ public class MyResource {
 
     /**
      * Method handling HTTP POST requests to upload an XML file.
-     *
-     * @return String that will be returned as plain text.
      */
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces(MediaType.TEXT_PLAIN)
-    public String acceptFile(@FormDataParam("xmlFile") File file) {
+    public void acceptFile(@FormDataParam("xmlFile") File file, @Context HttpServletResponse servletResponse) {
         //sanitize file
         //store file on server
         handler = new SaxHandler();
         handler.processFile(file);
-        return "File Upload Successful!";
+        try {
+            servletResponse.sendRedirect("../success.html");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

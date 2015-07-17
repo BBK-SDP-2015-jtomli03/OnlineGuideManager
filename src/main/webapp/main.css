@@ -62,24 +62,44 @@ label{
     color: #222;
 }
 
-.left, .right{
+.upload{
     float: left;
-    width: 45%;
+    background-color: #E6E6E6;
+    width: 95%;
     display: inline-block;
     padding: 1.5%;
+    margin: 3% 1% 1% 1%;
     border: 0;
 }
 
-.left{
-    background-color: #E6E6E6;
-    margin: 3% 1% 1% 1%;
+#uploadMessageSuccess {
+    width: 96%;
+    background-color: #669900;
+    padding: 2%;
+    display: inline-block;
 }
 
-.right{
+#uploadMessageSuccess img {
+    float: left;
+    width: 10%;
+    padding: 4%;
+    margin-left: 15%;
+}
+
+#uploadMessageSuccess p {
+    float: left;
+    font-size: 1.5em;
+    color: #ffffff;
+    padding-top: 4%;
+    margin: 0 15% 0 0;
+}
+
+#uploadMessageSuccess a {
+    float: left;
+    width: 30%;
     font-size: 1.25em;
-    text-align: center;
-    color: #333;
-    margin: 2% 1% 1% 1%;
+    color: #ffffff;
+    margin: 0 35% 2% 35%;
 }
 
 .input{
@@ -107,16 +127,23 @@ Styles for the Footer
 *************************************************/
 footer {
     width: 100%;
-    height: 300px;
     background-color: #333;
+    display: inline-block;
     margin: 5% 0 0 0;
 }
 
 footer p {
-    width: 40%;
+    width: 38%;
     font-family: "Courier New", courier, monospace;
     font-size: 2em;
     color: #FF9900;
-    padding: 2.5% 25%;
+    padding: 2.5% 0 10% 0;
+    margin: 0 auto;
+}
+
+p.reference {
+    width: 100%;
+    font-size: 1em;
+    padding: 20% 5% 5% 5%;
     margin: 0;
 }
