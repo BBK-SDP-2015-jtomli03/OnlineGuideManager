@@ -20,30 +20,32 @@ public class Schedule {
         // don't delete - empty constructor used for JSON
     }
 
+    // sorts the programmes of each channel into time order before returning the sorted Schedule
     public static Schedule getSchedule(){
+        Collections.sort(seanChannel);
+        Collections.sort(georgeChannel);
+        Collections.sort(rogerChannel);
+        Collections.sort(timothyChannel);
+        Collections.sort(pierceChannel);
+        Collections.sort(danielChannel);
         return schedule;
     }
 
+    //adds a programme to a sub-channel
     //need to include a function to check that programmes don't overlap
     public static void add(String channel, Programme programme){
         if(channel.equals("sean_channel")){
             seanChannel.add(programme);
-            Collections.sort(seanChannel);
         }else if(channel.equals("george_channel")){
             georgeChannel.add(programme);
-            Collections.sort(georgeChannel);
         }else if(channel.equals("roger_channel")){
             rogerChannel.add(programme);
-            Collections.sort(rogerChannel);
         }else if(channel.equals("timothy_channel")){
             timothyChannel.add(programme);
-            Collections.sort(timothyChannel);
         }else if(channel.equals("pierce_channel")){
             pierceChannel.add(programme);
-            Collections.sort(pierceChannel);
         }else if(channel.equals("daniel_channel")){
             danielChannel.add(programme);
-            Collections.sort(danielChannel);
         }else{
             throw new UnknownError("Channel not recognised in xml file");
         }

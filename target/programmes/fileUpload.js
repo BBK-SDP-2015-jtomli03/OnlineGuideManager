@@ -4,17 +4,6 @@
  * and handle the return response.
  **/
 
-$(document).ready(function(){
-    $("uploadMessage").hide;
-
-    $(input.input()).click(function(){
-        $("#uploadMessageSuccess").hide;
-        $("uploadMessage").show;
-    })
-
-
-})
-
 //
 //
 //$(document).ready(function() {
@@ -58,27 +47,9 @@ $(document).ready(function(){
 //    });
 //});
 
-//function sendXml()   {
-//    //var file = document.getElementById('xmlFile').getUserData("xmlFile");
-//    var file = document.getElementById('xmlFile').getParameter('upload');
-//
-//    // console.log($.isXMLDoc(xmlData));
-//    $.ajax({
-//        url: 'http://localhost:8080/programmes/bond',
-//        processData: false,
-//        type: "POST",  // type should be POST
-//        data: file, // send the string directly
-//        success: function(response){
-//            alert(response);
-//        },
-//        error: function(response) {
-//            alert(response);
-//        }
-//    });
-//}
 
-//// Variable to store your files
-//
+// Variable to store your files
+
 //var files;
 //
 //// Add events
